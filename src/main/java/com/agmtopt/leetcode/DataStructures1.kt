@@ -1,5 +1,8 @@
 package com.agmtopt.leetcode
 
+/**
+ * https://leetcode-cn.com/problems/contains-duplicate/
+ */
 class DataStructures1 {
 
     fun isRepeat(args: IntArray): Boolean {
