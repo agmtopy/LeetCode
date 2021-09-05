@@ -17,4 +17,5 @@ fun main() {
     val dataStructures1 = DataStructures1()
     val repeat = dataStructures1.isRepeat(intArrayOf(1, 2, 2, 3, 4))
     print("该数组是否有重复元素:$repeat")
+    print("edit")
 }
