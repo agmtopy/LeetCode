@@ -1,4 +1,4 @@
-package com.agmtopt.leetcode
+package com.agmtopy.leetcode
 
 import java.util.HashMap
 

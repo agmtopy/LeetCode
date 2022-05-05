@@ -1,4 +1,4 @@
-package com.agmtopt.leetcode
+package com.agmtopy.leetcode
 
 /**
  * https://leetcode-cn.com/problems/contains-duplicate/
