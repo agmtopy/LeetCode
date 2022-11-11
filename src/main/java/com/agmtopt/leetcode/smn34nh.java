@@ -1,24 +1,27 @@
 package com.agmtopt.leetcode;
 
-import java.util.Arrays;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class smn34nh {
     public static void main(String[] args) {
-        Arrays.asList(new Solution1().runningSum(new int[]{1, 2, 3, 4}))
-                .forEach(i -> System.out.println(i));
-    }
-}
 
-class Solution1 {
-    public int[] runningSum(int[] nums) {
-        int[] rs = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            if (i == 0) {
-                rs[i] = nums[0];
-                continue;
-            }
-            rs[i] = rs[i - 1] + nums[i];
-        }
-        return rs;
+        ReentrantReadWriteLock.ReadLock
+
+        HashMap map = new HashMap<>();
+
+        synchronized ()
+        map.put(null,null);
+
+        ConcurrentHashMap<String, String> hashMap = new ConcurrentHashMap<>();
+        hashMap.put(null,null);
+
+
+    }
+
+    public synchronized void m1(){
+
     }
 }
