@@ -1,4 +1,4 @@
-package com.agmtopt.leetcode.ag;
+package com.agmtopt.leetcode.ag.old;
 
 import com.agmtopt.leetcode.ag.domain.ListNode;
 
