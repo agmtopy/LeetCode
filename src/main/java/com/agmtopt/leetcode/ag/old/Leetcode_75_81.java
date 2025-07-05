@@ -1,7 +1,5 @@
 package com.agmtopt.leetcode.ag.old;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Leetcode_75_81 {
 
     public static void main(String[] args) {
@@ -10,7 +8,6 @@ public class Leetcode_75_81 {
         System.out.println(validBST);
     }
 
-    @NotNull
     private static TreeNode getTreeNode5() {
         TreeNode t4 = new TreeNode(4);
         TreeNode t3 = new TreeNode(3);
@@ -21,7 +18,6 @@ public class Leetcode_75_81 {
     }
 
 
-    @NotNull
     private static TreeNode getTreeNode4() {
         TreeNode t1 = new TreeNode(-1);
         TreeNode t2 = new TreeNode(2, t1, null);
@@ -29,7 +25,6 @@ public class Leetcode_75_81 {
     }
 
 
-    @NotNull
     private static TreeNode getTreeNode3() {
         TreeNode t1 = new TreeNode(2);
         TreeNode t3 = new TreeNode(2);
@@ -37,7 +32,6 @@ public class Leetcode_75_81 {
         return t2;
     }
 
-    @NotNull
     private static TreeNode getTreeNode1() {
         TreeNode t1 = new TreeNode(1);
         TreeNode t3 = new TreeNode(3);
@@ -46,7 +40,6 @@ public class Leetcode_75_81 {
     }
 
 
-    @NotNull
     private static TreeNode getTreeNode2() {
         TreeNode t1 = new TreeNode(1);
         TreeNode t3 = new TreeNode(3);

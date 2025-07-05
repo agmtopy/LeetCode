@@ -1,7 +1,6 @@
 package com.agmtopt.leetcode.ag.old;
 
 import com.google.common.collect.Lists;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
