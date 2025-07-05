@@ -1,0 +1,6 @@
+/.gradle/*
+/.idea/*
+/build/*
+/out/*
+/.gradle/
+/.gradle/7.5.1/

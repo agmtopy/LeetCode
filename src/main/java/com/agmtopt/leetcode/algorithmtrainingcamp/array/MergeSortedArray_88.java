@@ -1,6 +1,6 @@
 package com.agmtopt.leetcode.algorithmtrainingcamp.array;
 
-public class MergeSortedArray {
+public class MergeSortedArray_88 {
     public static void main(String[] args) {
         test1();
         test2();
@@ -12,7 +12,7 @@ public class MergeSortedArray {
         int[] nums1 = new int[]{0, 0, 0, 0, 0};
         int[] nums2 = new int[]{1, 2, 3, 4, 5};
 
-        MergeSortedArraySolution solution = new MergeSortedArraySolution();
+        MergeSortedArray_88_Solution solution = new MergeSortedArray_88_Solution();
         solution.merge2(nums1, 0, nums2, 5);
         for (int num : nums1) {
             System.out.print(num + ",");
@@ -24,7 +24,7 @@ public class MergeSortedArray {
         int[] nums1 = new int[]{2, 0};
         int[] nums2 = new int[]{1};
 
-        MergeSortedArraySolution solution = new MergeSortedArraySolution();
+        MergeSortedArray_88_Solution solution = new MergeSortedArray_88_Solution();
         solution.merge2(nums1, 1, nums2, 1);
         for (int num : nums1) {
             System.out.print(num + ",");
@@ -36,7 +36,7 @@ public class MergeSortedArray {
         int[] nums1 = new int[]{0};
         int[] nums2 = new int[]{2};
 
-        MergeSortedArraySolution solution = new MergeSortedArraySolution();
+        MergeSortedArray_88_Solution solution = new MergeSortedArray_88_Solution();
         solution.merge2(nums1, 0, nums2, 1);
         for (int num : nums1) {
             System.out.print(num + ",");
@@ -48,7 +48,7 @@ public class MergeSortedArray {
         int[] nums1 = new int[]{1, 2, 3, 0, 0, 0};
         int[] nums2 = new int[]{2, 5, 6};
 
-        MergeSortedArraySolution solution = new MergeSortedArraySolution();
+        MergeSortedArray_88_Solution solution = new MergeSortedArray_88_Solution();
         solution.merge2(nums1, 3, nums2, 3);
         for (int num : nums1) {
             System.out.print(num + ",");
@@ -57,7 +57,7 @@ public class MergeSortedArray {
     }
 }
 
-class MergeSortedArraySolution {
+class MergeSortedArray_88_Solution {
     /**
      * 使用同一个数组nums1,倒叙进行处理
      */
@@ -141,7 +141,7 @@ class MergeSortedArraySolution {
 
 
     /**
-     * 倒序,不增加新的索引的方式
+     * 倒序,不增加新的索引0的方式
      */
     public void merge2(int[] nums1, int m, int[] nums2, int n) {
         int p = m + n - 1;
