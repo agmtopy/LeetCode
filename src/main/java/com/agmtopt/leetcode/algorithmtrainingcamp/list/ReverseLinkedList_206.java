@@ -29,18 +29,42 @@ public class ReverseLinkedList_206 {
 }
 
 class ReverseLinkedList_206_Solution {
-    public ListNode reverseList(ListNode head) {
-        ListNode lastNode = null;
-        while (head != null){
-            ListNode nextNode = head.next;
-            head.next = lastNode;
 
-            lastNode = head;
-            head = nextNode;
+    /**
+     * 遍历节点处理
+     */
+    public ListNode reverseList(ListNode head) {
+        ListNode curNode = head;
+        ListNode nextNode = null;
+        while (curNode != null) {
+            ListNode preNode = curNode.next;
+            curNode.next = nextNode;
+
+            nextNode = curNode;
+            curNode = preNode;
         }
 
-        return lastNode;
+        return curNode;
     }
+
+
+    /**
+     * 递归处理
+     */
+    public ListNode reverseList1(ListNode head) {
+        return this.recursion(head, null);
+    }
+
+    private ListNode recursion(ListNode curNode, ListNode preNode) {
+        if (curNode == null) {
+            return preNode;
+        }
+
+        ListNode resNode = this.recursion(curNode.next, curNode);
+        curNode.next = preNode;
+        return resNode;
+    }
+
 
     @ToString
     public static class ListNode {
