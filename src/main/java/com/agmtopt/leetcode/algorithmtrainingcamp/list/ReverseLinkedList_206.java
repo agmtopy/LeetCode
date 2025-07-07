@@ -11,17 +11,17 @@ public class ReverseLinkedList_206 {
 
 
     public static void test1() {
-        ReverseLinkedList_206_Solution.ListNode node5 = new ReverseLinkedList_206_Solution.ListNode(5);
-        ReverseLinkedList_206_Solution.ListNode node4 = new ReverseLinkedList_206_Solution.ListNode(4, node5);
-        ReverseLinkedList_206_Solution.ListNode node3 = new ReverseLinkedList_206_Solution.ListNode(3, node4);
-        ReverseLinkedList_206_Solution.ListNode node2 = new ReverseLinkedList_206_Solution.ListNode(2, node3);
-        ReverseLinkedList_206_Solution.ListNode head = new ReverseLinkedList_206_Solution.ListNode(1, node2);
+        ListNode node5 = new ListNode(5);
+        ListNode node4 = new ListNode(4, node5);
+        ListNode node3 = new ListNode(3, node4);
+        ListNode node2 = new ListNode(2, node3);
+        ListNode head = new ListNode(1, node2);
 
         System.out.println("head:" + JSON.toJSONString(head));
 
 
         ReverseLinkedList_206_Solution solution = new ReverseLinkedList_206_Solution();
-        ReverseLinkedList_206_Solution.ListNode listNode = solution.reverseList(head);
+        ListNode listNode = solution.reverseList(head);
 
         System.out.println(JSON.toJSONString(listNode));
     }
@@ -63,25 +63,6 @@ class ReverseLinkedList_206_Solution {
         ListNode resNode = this.recursion(curNode.next, curNode);
         curNode.next = preNode;
         return resNode;
-    }
-
-
-    @ToString
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 }
 
