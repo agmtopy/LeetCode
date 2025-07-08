@@ -16,7 +16,7 @@ public class LinkedListCycleIi_142 {
         ListNode head = new ListNode(3, node2);
 
         LinkedListCycleIi_142_Solution solution = new LinkedListCycleIi_142_Solution();
-        boolean result = solution.hasCycle(head);
+        ListNode result = solution.hasCycle(head);
         System.out.println("result : " + result);
     }
 
