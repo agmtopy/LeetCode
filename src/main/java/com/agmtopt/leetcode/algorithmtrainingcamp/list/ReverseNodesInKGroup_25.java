@@ -10,7 +10,7 @@ public class ReverseNodesInKGroup_25 {
 
 
     public static void test1() {
-        ListNode node5 = new ListNode(5,null);
+        ListNode node5 = new ListNode(5, null);
         ListNode node4 = new ListNode(4, node5);
         ListNode node3 = new ListNode(3, node4);
         ListNode node2 = new ListNode(2, node3);
@@ -30,62 +30,57 @@ public class ReverseNodesInKGroup_25 {
 
 class ReverseNodesInKGroup_25_Solution {
     public ListNode reverseKGroup(ListNode head, int k) {
-        //1. 设置虚拟节点,用于排除临界条件
-        ListNode protect = new ListNode(0,head);
-        ListNode last = protect;
+        //1. 用临时节点将head节点串起来
+        ListNode temp = new ListNode(0, head);
+        ListNode tail = temp;
 
-        //2. 遍历链表
+        head = tail.next;
         while (head != null) {
-            //2.1 获取指定长度下最后一个元素
-            ListNode end = this.getEndNode(head, k);
+            //获取最后一个元素
+            ListNode end = getEnd(head, k);
 
-            //2.2 如果最后一个元素是null,表示已遍历到队尾
-            if (end == null) break;
+            if(end == null) break;
+            ListNode group_head = end.next;
 
-            //3. 暂存下一组的队首元素
-            ListNode nextGroupHead = end.next;
+            //翻转元素
+            this.rv(head, end);
 
-            //4. 对[head,end]进行翻转
-            this.reverseList(head, end);
+            //设置边
+            tail.next = end;
+            head.next = group_head;
 
-            //5. end节点已经变成分组列表头节点,head节点现在是分组列表尾节点
-            last.next = end;
-            head.next = nextGroupHead;
-
-            //6. 分组遍历
-            last = head;
-            head = nextGroupHead;
+            //重置head
+            tail = head;
+            head = group_head;
         }
 
-        return protect.next;
+        return temp.next;
     }
 
     /**
-     * 对[headNode,endNode]中的数组进行翻转
+     * 翻转元素
      */
-    private void reverseList(ListNode headNode, ListNode endNode) {
-        //1. 两个节点相等时,直接返回
-        if (headNode == endNode) {
-            return;
+    private void rv(ListNode head, ListNode end) {
+        if (head == end) return;
+
+        ListNode orgHead = head;
+
+        ListNode tail = head;
+        head = head.next;
+
+        while (head != end) {
+            ListNode preNode = head.next;
+            head.next = tail;
+
+            tail = head;
+            head = preNode;
         }
 
-        //2. 暂存此时的队首元素
-        ListNode last = headNode;
-        headNode = headNode.next;
-        while (headNode != endNode) {
-            ListNode nextNode = headNode.next;
-            headNode.next = last;
-
-            last = headNode;
-            headNode = nextNode;
-        }
-        endNode.next = last;
+        orgHead.next = end.next;
+        end.next = tail;
     }
 
-    /**
-     * 获取指定长度下最后一个元素
-     */
-    private ListNode getEndNode(ListNode head, int k) {
+    private ListNode getEnd(ListNode head, int k) {
         while (head != null) {
             k--;
             if (k == 0) {
@@ -95,4 +90,5 @@ class ReverseNodesInKGroup_25_Solution {
         }
         return head;
     }
+
 }
