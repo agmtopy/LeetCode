@@ -4,3 +4,5 @@
 /out/*
 /.gradle/
 /.gradle/7.5.1/
+/.gradle/
+/.gradle/buildOutputCleanup/
