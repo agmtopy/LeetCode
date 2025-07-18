@@ -2,7 +2,6 @@ package com.agmtopt.leetcode.algorithmtrainingcamp.prefix;
 
 public class MaximumSubarray_53 {
 
-
     public static void main(String[] args) {
         MaximumSubarray_53__Solution solution = new MaximumSubarray_53__Solution();
 
