@@ -1,4 +1,4 @@
-package com.agmtopt.leetcode.algorithmtrainingcamp.prefix;
+package com.agmtopt.leetcode.algorithmtrainingcamp.twopointers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
