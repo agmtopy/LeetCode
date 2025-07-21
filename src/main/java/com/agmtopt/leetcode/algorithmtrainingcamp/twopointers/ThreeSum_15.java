@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ThreeSum {
+public class ThreeSum_15 {
 
     public static void main(String[] args) {
         ThreeSum_15_Solution solution = new ThreeSum_15_Solution();
