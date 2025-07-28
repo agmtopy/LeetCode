@@ -41,4 +41,23 @@ class SubarraySumEqualsK_560_Solution {
         }
         return rs;
     }
+
+    public int subarraySum1(int[] nums, int k) {
+
+        int[] targers = new int[nums.length+1];
+
+        for (int i = 0; i < nums.length; i++) {
+            targers[i + 1] = targers[i] + nums[i];
+        }
+
+        int rs = 0;
+        for (int i = targers.length - 1; i > 0; i--) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (targers[i] - targers[j] == k) {
+                    rs++;
+                }
+            }
+        }
+        return rs;
+    }
 }
