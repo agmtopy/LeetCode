@@ -1,4 +1,4 @@
-package com.agmtopt.leetcode.algorithmtrainingcamp.tree;
+package com.agmtopt.leetcode.algorithmtrainingcamp.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
